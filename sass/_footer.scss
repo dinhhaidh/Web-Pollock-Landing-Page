@@ -1,0 +1,135 @@
+.footer {
+  background-color: $bg-gray;
+  color: white;
+  overflow: hidden;
+  &-top {
+    padding: 100px 0;
+    display: grid;
+    gap: 1.5rem;
+    .logo {
+      color: white;
+    }
+  }
+  &-content{
+    display: grid;
+    gap: 1.5rem;
+  }
+  &-bottom {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-top: 1px solid rgba(123, 136, 168, 0.3);
+  }
+  &-s {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    &-item {
+      background-color: $primary-color;
+      width: 52px;
+      height: 52px;
+      border-radius: 100rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      i {
+        color: #fff ;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &-heading {
+    font-size: 22px;
+    line-height: calc(32 / 22);
+    margin-bottom: 20px;
+  }
+  &-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+  }
+  &-link {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase;
+  }
+  &-column {
+    flex-shrink: 0;
+    &:last-child {
+      max-width: 370px;
+    }
+  }
+  .newsletter {
+    &-desc {
+      margin-bottom: 25px;
+    }
+    &-form {
+      display: flex;
+      height: 48px;
+      width: 100%;
+      gap: 6px;
+    }
+    &-input {
+      all: unset;
+      background-color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      padding: 0 18px;
+      color: $text;
+      flex: 1;
+    }
+    &-button {
+      flex-shrink: 0;
+      padding: 0 24px;
+    }
+    &-warning {
+      margin-top: 15px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-top {
+      padding: 50px 0;
+      // flex-direction: column;
+      gap: 30px;
+    }
+    &-bottom {
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 575px) {
+    &-content{
+      grid-template-columns: repeat(2, max-content);
+      gap: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    &-content{
+      grid-template-columns: repeat(3, max-content);
+    }
+  }
+  @media screen and (min-width: 820px) {
+    &-content{
+      grid-template-columns: repeat(4, max-content);
+      gap: 2.5rem;
+    }
+    &-top{
+      gap: 2.5rem;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    &-top{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+.custom-fa:before  {
+  color: #fff ;
+}
